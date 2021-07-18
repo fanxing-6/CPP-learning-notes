@@ -19,3 +19,6 @@ STL分为六大组件:
 ![image-20210717224703171](https://lzx-figure-bed.obs.dualstack.cn-north-4.myhuaweicloud.com/Figurebed/image-20210717224703171.png)
 
 其中,红色框框为`C++11`新增
+
+## 分配器
+
