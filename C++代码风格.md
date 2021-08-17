@@ -2,6 +2,8 @@
 
 ![image-20210813183714206](https://lzx-figure-bed.obs.dualstack.cn-north-4.myhuaweicloud.com/Figurebed/image-20210813183714206.png)
 
+<img src="https://lzx-figure-bed.obs.dualstack.cn-north-4.myhuaweicloud.com/Figurebed/original_363728fcf8b6b056188a2bba6a3e87ed.jpg" alt="original_363728fcf8b6b056188a2bba6a3e87ed" style="zoom:200%;" />
+
 ​    #include 用来包含文件,不只是头文件
 
 <div class="se-32a24e79 " data-slate-type="paragraph" data-slate-object="block" data-key="778"><span data-slate-object="text" data-key="779"><span data-slate-leaf="true" data-offset-key="779:0" data-first-offset="true"><span data-slate-string="true">比如说，有一个用于数值计算的大数组，里面有成百上千个数，放在文件里占了很多地方，特别“碍眼”：</span></span></span></div>
