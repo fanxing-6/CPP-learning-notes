@@ -607,6 +607,7 @@ Stack( char const*) -> Stack<std::string>;
 这个指引必须出现在类定义的块,或者命名空间里
 
 ```cpp
+template<typename T>
 Stack(const char*) -> Stack<std::string>;
 Stack stringStack{"bottom"}; // OK: Stack<std::string> deduced since C++17
 ```
