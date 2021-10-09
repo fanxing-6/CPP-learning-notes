@@ -92,3 +92,55 @@ int main()
 }
 ```
 
+使用`(np->* ... ->* paths)`这个折叠表达式去遍历参数代表的路径
+
+使用折叠表达式我们可以实现打印参数列表
+
+```cpp
+template<typename ... Types>
+void print(Types const&... args)
+{
+	(std::cout << ... << args) << '\n';
+}
+
+int main()
+{
+	int a{ 12 };
+	std::string b{ "博主是帅哥" };
+	print(a, b);
+}
+```
+
+但是我们这个函数有个小缺陷,就是无法打印空格,让我们来实现一下:
+
+```cpp
+template<typename T>
+class AddSpace
+{
+  private:
+    T const& ref;                  // refer to argument passed in constructor
+  public:
+    AddSpace(T const& r): ref(r) {
+    }
+    friend std::ostream& operator<< (std::ostream& os, AddSpace<T> s) {
+      return os << s.ref << ' ';   // output passed argument and a space
+    }
+};
+
+template<typename... Args>
+void print (Args... args) {
+  ( std::cout << ... << AddSpace(args) ) << '\n';
+}
+```
+
+运行:
+
+```cpp
+int main()
+{
+	int a{ 12 };
+	std::string b{ "博主是帅哥" };
+	print(a, b);
+}
+```
+
